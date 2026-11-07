@@ -107,7 +107,7 @@
       <a href="/representative/" class="nav-item inline-flex h-11 items-center transition-colors hover:text-gold-ink">代表について</a>
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
-      <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
+      <a href="/contact/#form-request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
       <a href="/contact/" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
@@ -130,7 +130,7 @@
         <a href="/faq/" class="flex items-center justify-between border-t py-3.5 font-bold">よくあるご質問<svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
         <a href="/representative/" class="flex items-center justify-between border-t py-3.5 font-bold">代表について<svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
       <div class="mt-3 grid grid-cols-2 gap-2 border-t pt-4">
-        <a href="/contact/#request" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-full text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
+        <a href="/contact/#form-request" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-full text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
         <a href="/contact/" class="inline-flex h-12 items-center justify-center gap-2 rounded-full border-2 border-gold text-sm font-bold text-gold-ink"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
       </div>
       <p class="num mt-4 text-center text-sm"><span class="font-bold">090-9112-6102</span><span class="ml-2 text-xs text-muted-foreground">平日 9:00〜19:00</span></p>
@@ -200,7 +200,7 @@
           <dt>当サイトの閲覧</dt><dd>Cookieなどを使ったアクセス情報（「5. 外部送信」をご覧ください）</dd>
         </dl>
         <h3>（2）取得の方法</h3>
-        <p>お客様から直接（メール、電話、公式LINE、打ち合わせ、郵送など）、またはお客様から招待を受けた会計ソフト・クラウドサービスを通じて、適正な方法で取得します。偽りその他の不正な手段で取得することはありません。</p>
+        <p>お客様から直接（メール、電話、公式LINE、お問い合わせフォーム、打ち合わせ、郵送など）、またはお客様から招待を受けた会計ソフト・クラウドサービスを通じて、適正な方法で取得します。偽りその他の不正な手段で取得することはありません。</p>
         <h3>（3）マイナンバー</h3>
         <p>マイナンバー（個人番号）は、原則として取り扱いません。業務上やむを得ず取り扱う場合は、マイナンバー法と個人情報保護委員会のガイドラインに従って取扱規程を定め、法令で定められた事務に限って利用します。</p>
 
@@ -285,6 +285,12 @@
           <dt>送信される主な情報</dt><dd>当サイトを表示する通信で送られる、IPアドレスなど（GitHubは、安全のため閲覧者のIPアドレスを記録します）</dd>
           <dt>目的</dt><dd>当サイトの配信</dd>
         </dl>
+        <h3>Googleフォーム（お問い合わせページ）</h3>
+        <dl class="policy-dl">
+          <dt>送信先</dt><dd>Google LLC</dd>
+          <dt>送信される主な情報</dt><dd>フォームに入力した内容、IPアドレス、Cookieの情報、ブラウザの情報</dd>
+          <dt>目的</dt><dd>お問い合わせ・資料請求の受付</dd>
+        </dl>
         <p>Google アナリティクスによる情報の収集は、ブラウザの設定でCookieを無効にするか、Google社が提供する「Google アナリティクス オプトアウト アドオン」を使うと、止めることができます。</p>
         <h3>各事業者の説明</h3>
         <ul>
@@ -316,7 +322,7 @@
 
         <h3>制定・改定の履歴</h3>
         <dl class="policy-dl">
-          <dt>2026年11月7日</dt><dd>改定（章立ての整理、外部送信の章を追加、保存期間と個人情報保護管理者を明記）</dd>
+          <dt>2026年11月7日</dt><dd>改定（章立ての整理、外部送信の章を追加、保存期間と個人情報保護管理者を明記、お問い合わせフォームを追加）</dd>
           <dt>2026年10月30日</dt><dd>制定</dd>
         </dl>
 
@@ -354,7 +360,7 @@
         <a href="/faq/" class="hover:text-night-foreground">よくあるご質問</a>
         <a href="/representative/" class="hover:text-night-foreground">代表について</a>
         <a href="/contact/" class="hover:text-night-foreground">お問い合わせ</a>
-        <a href="/contact/#request" class="hover:text-night-foreground">資料請求</a>
+        <a href="/contact/#form-request" class="hover:text-night-foreground">資料請求</a>
       </nav>
     </div>
     <div class="mt-12 flex flex-col gap-3 border-t border-night-border pt-6 text-xs text-night-muted sm:flex-row sm:items-center sm:justify-between">

@@ -107,7 +107,7 @@
       <a href="/representative/" class="nav-item inline-flex h-11 items-center transition-colors hover:text-gold-ink">代表について</a>
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
-      <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
+      <a href="/contact/#form-request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
       <a href="/contact/" aria-current="page" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
@@ -130,7 +130,7 @@
         <a href="/faq/" class="flex items-center justify-between border-t py-3.5 font-bold">よくあるご質問<svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
         <a href="/representative/" class="flex items-center justify-between border-t py-3.5 font-bold">代表について<svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></a>
       <div class="mt-3 grid grid-cols-2 gap-2 border-t pt-4">
-        <a href="/contact/#request" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-full text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
+        <a href="/contact/#form-request" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-full text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
         <a href="/contact/" class="inline-flex h-12 items-center justify-center gap-2 rounded-full border-2 border-gold text-sm font-bold text-gold-ink"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
       </div>
       <p class="num mt-4 text-center text-sm"><span class="font-bold">090-9112-6102</span><span class="ml-2 text-xs text-muted-foreground">平日 9:00〜19:00</span></p>
@@ -181,8 +181,21 @@
       </div>
     </div>
 
+    <!-- フォーム（Googleフォーム）。資料請求ボタンから来たときは「資料が欲しい」を選んだ状態で開く -->
+    <div id="form" class="mx-auto mt-12 max-w-[48rem]">
+      <span id="form-request" class="block" aria-hidden="true"></span>
+      <div class="rounded-2xl border-2 border-gold bg-white p-5 sm:p-7">
+        <p class="flex items-center gap-2.5 text-lg font-black"><svg class="size-5 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clipboard"/></svg>フォームでのお問い合わせ</p>
+        <p class="mt-2 leading-[1.85] text-muted-foreground">「何を任せられるか知りたい」「自社の場合の料金を知りたい」といったご質問も受け付けています。1営業日以内にお返事します（土曜日・日曜日・祝日を除く）。</p>
+        <div class="mt-5 overflow-hidden rounded-xl bg-surface">
+          <iframe id="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSeS1XkYdbJNS36jARbiQ2s-arTFvuqXmgC98lWIfinTHdKzsA/viewform?embedded=true" data-src="https://docs.google.com/forms/d/e/1FAIpQLSeS1XkYdbJNS36jARbiQ2s-arTFvuqXmgC98lWIfinTHdKzsA/viewform?embedded=true" data-request-src="https://docs.google.com/forms/d/e/1FAIpQLSeS1XkYdbJNS36jARbiQ2s-arTFvuqXmgC98lWIfinTHdKzsA/viewform?embedded=true&amp;usp=pp_url&amp;entry.1822353076=%E8%B3%87%E6%96%99%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%84" title="Terrario お問い合わせフォーム" class="block h-[1580px] w-full sm:h-[1360px]">読み込んでいます…</iframe>
+        </div>
+        <p class="mt-3 text-sm leading-[1.8] text-muted-foreground">フォームが表示されない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSeS1XkYdbJNS36jARbiQ2s-arTFvuqXmgC98lWIfinTHdKzsA/viewform" target="_blank" rel="noopener" class="font-bold text-gold-ink underline underline-offset-4">新しいタブで開く</a>か、下のお電話・メール・公式LINEをご利用ください。</p>
+      </div>
+    </div>
+
     <!-- 電話（大きく） -->
-    <div class="mx-auto mt-12 grid max-w-[60rem] items-center gap-6 rounded-2xl border-2 border-gold/60 bg-surface p-6 sm:p-8 md:grid-cols-[auto_minmax(0,1fr)_auto]">
+    <div class="mx-auto mt-6 grid max-w-[60rem] items-center gap-6 rounded-2xl border-2 border-gold/60 bg-surface p-6 sm:p-8 md:grid-cols-[auto_minmax(0,1fr)_auto]">
       <span class="mx-auto inline-flex size-24 items-center justify-center rounded-full bg-gold-soft text-gold-ink md:mx-0"><svg class="size-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg></span>
       <div class="text-center md:text-left">
         <p class="text-sm font-bold">お電話でのご相談</p>
@@ -230,11 +243,12 @@
         <span class="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-night-card text-night-gold"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg></span>
         <div class="min-w-0">
           <p class="text-lg font-black">サービス資料のご請求</p>
-          <p class="mt-1 text-sm leading-[1.9] text-night-muted">サービス内容・料金・導入の流れをまとめた資料（PDF）をお送りします。会社名・お名前・ご連絡先をお知らせください。公式LINEの場合は「資料請求」とお送りください。</p>
+          <p class="mt-1 text-sm leading-[1.9] text-night-muted">サービス内容・料金・導入の流れをまとめた資料（PDF）をお送りします。フォームで「資料が欲しい」を選んで送信してください。メールの場合は会社名・お名前・ご連絡先を、公式LINEの場合は「資料請求」とお送りください。</p>
         </div>
       </div>
       <div class="flex flex-col gap-2 sm:flex-row md:flex-col">
-        <a href="mailto:hisashi@terrario2026.com?subject=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%B3%87%E6%96%99%E3%81%AE%E8%AB%8B%E6%B1%82&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%BE%E3%81%9F%E3%81%AF%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%89%EF%BC%9A%0A%E5%BE%93%E6%A5%AD%E5%93%A1%E6%95%B0%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>メールで資料を請求する</a>
+        <a href="#form-request" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-sm font-bold"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clipboard"/></svg>フォームで資料を請求する</a>
+        <a href="mailto:hisashi@terrario2026.com?subject=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%B3%87%E6%96%99%E3%81%AE%E8%AB%8B%E6%B1%82&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%81%BE%E3%81%9F%E3%81%AF%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%89%EF%BC%9A%0A%E5%BE%93%E6%A5%AD%E5%93%A1%E6%95%B0%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A" class="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-night-border px-6 text-sm font-bold transition-colors hover:bg-night-foreground/5"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>メールで資料を請求する</a>
         <a href="https://lin.ee/r31b6uB" target="_blank" rel="noopener" class="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-night-border px-6 text-sm font-bold transition-colors hover:bg-night-foreground/5"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>公式LINEで請求する</a>
       </div>
     </div>
@@ -273,7 +287,7 @@
         <a href="/faq/" class="hover:text-night-foreground">よくあるご質問</a>
         <a href="/representative/" class="hover:text-night-foreground">代表について</a>
         <a href="/contact/" class="hover:text-night-foreground">お問い合わせ</a>
-        <a href="/contact/#request" class="hover:text-night-foreground">資料請求</a>
+        <a href="/contact/#form-request" class="hover:text-night-foreground">資料請求</a>
       </nav>
     </div>
     <div class="mt-12 flex flex-col gap-3 border-t border-night-border pt-6 text-xs text-night-muted sm:flex-row sm:items-center sm:justify-between">

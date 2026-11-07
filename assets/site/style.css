@@ -481,6 +481,9 @@
   .h-\[30px\] {
     height: 30px;
   }
+  .h-\[1580px\] {
+    height: 1580px;
+  }
   .h-full {
     height: 100%;
   }
@@ -1515,6 +1518,9 @@
     }
     .sm\:inline-flex {
       display: inline-flex;
+    }
+    .sm\:h-\[1360px\] {
+      height: 1360px;
     }
     .sm\:w-\[64\%\] {
       width: 64%;

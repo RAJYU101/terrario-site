@@ -59,6 +59,17 @@
     updateMail();
   }
 
+  // お問い合わせフォーム：資料請求ボタン（#form-request）から来たときは「資料が欲しい」を選んだ状態で開く
+  const formFrame = document.getElementById('contact-form');
+  if (formFrame) {
+    const applyForm = () => {
+      const src = location.hash === '#form-request' ? formFrame.dataset.requestSrc : formFrame.dataset.src;
+      if (formFrame.getAttribute('src') !== src) formFrame.setAttribute('src', src);
+    };
+    applyForm();
+    window.addEventListener('hashchange', applyForm);
+  }
+
   // ===== ヘッダーの動き =====
   const header = document.getElementById('site-header');
   const bar = document.getElementById('hdr-progress-bar');
