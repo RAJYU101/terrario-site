@@ -87,7 +87,7 @@
           <div class="rounded-xl border bg-white p-2 shadow-[0_24px_50px_-24px_rgb(23_22_15/0.45)]">
             <a href="/service/" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-book"/></svg></span>
-              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">対応業務と、プランごとの対応範囲</span></span>
+              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">業務の内容と、プランごとの対応範囲</span></span>
             </a>
             <a href="/service/#features" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cloud"/></svg></span>
@@ -108,7 +108,7 @@
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
       <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
-      <a href="/contact/" class="inline-flex h-10 items-center gap-1.5 rounded-full border-2 border-gold bg-white px-3 text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
+      <a href="/contact/" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
       </button>
@@ -159,7 +159,7 @@
 <section class="py-14 sm:py-20" aria-label="プライバシーポリシー本文">
   <div class="wrap">
     <div class="mx-auto max-w-[48rem]">
-      <p class="policy-lead">Terrario（テラリオ）（以下「Terrario」）は、お客様の会社の経理・事務をお預かりする事業者として、個人情報の保護を大切な責務と考えています。個人情報の保護に関する法律（以下「個人情報保護法」）、行政手続における特定の個人を識別するための番号の利用等に関する法律（以下「マイナンバー法」）、個人情報保護委員会のガイドライン、その他の関係法令を守り、次のとおり個人情報を取り扱います。</p>
+      <p class="policy-lead">Terrario（テラリオ。以下「Terrario」）は、お客様の会社の経理・事務をお預かりする事業者として、個人情報の保護を大切な責務と考えています。個人情報の保護に関する法律（以下「個人情報保護法」）、行政手続における特定の個人を識別するための番号の利用等に関する法律（以下「マイナンバー法」）、個人情報保護委員会のガイドライン、その他の関係法令を守り、次のとおり個人情報を取り扱います。</p>
 
       <nav class="policy-toc" aria-label="目次">
         <p class="text-sm font-black">目次</p>
@@ -288,7 +288,7 @@
         <p>ご本人またはその代理人から、Terrarioが保有する個人データについて、利用目的の通知、開示（第三者に提供した記録の開示を含みます）、訂正・追加・削除、利用の停止・消去、第三者への提供の停止のご請求があった場合は、ご本人であることを確認したうえで、法令に従って遅滞なく対応します。</p>
         <dl class="policy-dl">
           <dt>ご請求の方法</dt><dd>「14. お問い合わせ窓口」へご連絡ください。ご請求の書面と、ご本人であることを確認する書類をご案内します。</dd>
-          <dt>手数料</dt><dd>利用目的の通知と開示のご請求は、1回につき1,000円（税込）の手数料をいただきます。訂正や利用停止などのご請求に、手数料はかかりません。</dd>
+          <dt>手数料</dt><dd>利用目的の通知と開示のご請求には、1回につき1,000円（税込）の手数料をいただきます。訂正や利用停止などのご請求に、手数料はかかりません。</dd>
         </dl>
         <p>業務でお預かりしている個人データ（お客様の従業員の方の情報など）は、お客様（業務の委託元）が保有するものです。開示などのご請求は、お客様へお願いします。Terrarioは、お客様の指示に従って対応に協力します。</p>
 
@@ -302,7 +302,7 @@
         </dl>
 
         <h2 id="p15"><span>15</span>改定</h2>
-        <p>法令の改正や事業内容の変更に合わせて、本ポリシーを改定することがあります。大切な変更は、当サイトでお知らせします。</p>
+        <p>法令の改正や事業内容の変更に合わせて、本ポリシーを改定することがあります。重要な変更は、当サイトでお知らせします。</p>
 
         <p class="policy-sign">制定日：2026年10月30日<br>Terrario（テラリオ）　代表 児玉 ヒサシ</p>
       </div>
@@ -321,7 +321,7 @@
           <img src="/assets/site/img/logo-symbol-light.png" alt="" width="42" height="32" class="h-8 w-[42px]">
           <img src="/assets/site/img/logo-wordmark-light.png" alt="" width="140" height="13" class="h-[13px] w-[140px]">
         </a>
-        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業にもっと時間を。</p>
+        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業に、もっと時間を。</p>
       </div>
       <dl class="grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2 text-sm">
         <dt class="text-night-muted">名称</dt><dd>Terrario（テラリオ）</dd>
@@ -357,7 +357,7 @@
 <!-- スマホ下部の相談ボタン -->
 <div id="sticky-cta" class="sticky-cta fixed inset-x-0 bottom-0 z-40 grid grid-cols-[auto_1fr] gap-2 border-t bg-white/95 backdrop-blur md:hidden">
   <a href="tel:09091126102" class="inline-flex h-12 items-center justify-center gap-1.5 rounded-md border border-input bg-white px-4 text-sm font-bold"><svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>電話</a>
-  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-[0.6875rem]">60分</span>無料診断を相談する</a>
+  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-xs">60分</span>無料診断を相談する</a>
 </div>
 
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-24 left-1/2 z-[80] -translate-x-1/2 rounded-md bg-night px-4 py-3 text-sm text-night-foreground shadow-lg md:bottom-8" hidden></div>

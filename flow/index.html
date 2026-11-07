@@ -87,7 +87,7 @@
           <div class="rounded-xl border bg-white p-2 shadow-[0_24px_50px_-24px_rgb(23_22_15/0.45)]">
             <a href="/service/" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-book"/></svg></span>
-              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">対応業務と、プランごとの対応範囲</span></span>
+              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">業務の内容と、プランごとの対応範囲</span></span>
             </a>
             <a href="/service/#features" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cloud"/></svg></span>
@@ -108,7 +108,7 @@
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
       <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
-      <a href="/contact/" class="inline-flex h-10 items-center gap-1.5 rounded-full border-2 border-gold bg-white px-3 text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
+      <a href="/contact/" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
       </button>
@@ -170,7 +170,7 @@
       <li class="relative rounded-2xl border-2 border-gold bg-white p-6">
         <div class="flex items-center justify-between"><span class="num inline-flex h-8 items-center rounded-full bg-night px-3 text-xs font-bold text-night-gold">STEP 02</span><span class="text-xs font-bold text-gold-ink">1週目・約60分・無料</span></div>
         <h3 class="mt-4 text-lg font-black">無料診断</h3>
-        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">作業時間・困りごと・ご予算を伺います。帳簿や請求書を拝見する前に、秘密保持契約を結びます。</p>
+        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">オンラインまたはお電話で、作業時間・お困りごと・ご予算を伺います（必要に応じて訪問）。帳簿や請求書を拝見する前に、秘密保持契約を結びます。</p>
       </li>
       <li class="relative rounded-2xl border bg-white p-6">
         <div class="flex items-center justify-between"><span class="num inline-flex h-8 items-center rounded-full bg-night px-3 text-xs font-bold text-night-gold">STEP 03</span><span class="text-xs font-bold text-gold-ink">2週目</span></div>
@@ -180,7 +180,7 @@
       <li class="relative rounded-2xl border bg-white p-6">
         <div class="flex items-center justify-between"><span class="num inline-flex h-8 items-center rounded-full bg-night px-3 text-xs font-bold text-night-gold">STEP 04</span><span class="text-xs font-bold text-gold-ink">2〜3週目</span></div>
         <h3 class="mt-4 text-lg font-black">ご契約</h3>
-        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">任せる業務・月の件数・締め日・報告日を決めて契約します。初期導入費は、業務開始前にお支払いいただきます。</p>
+        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">お任せいただく業務・月の件数・締め日・報告日を決めたうえで、ご契約いただきます。初期導入費と最初の1か月分の月額は、業務開始前に前払いでお支払いいただきます。</p>
       </li>
       <li class="relative rounded-2xl border bg-white p-6">
         <div class="flex items-center justify-between"><span class="num inline-flex h-8 items-center rounded-full bg-night px-3 text-xs font-bold text-night-gold">STEP 05</span><span class="text-xs font-bold text-gold-ink">3〜4週目</span></div>
@@ -190,7 +190,7 @@
       <li class="relative rounded-2xl border bg-white p-6">
         <div class="flex items-center justify-between"><span class="num inline-flex h-8 items-center rounded-full bg-gold px-3 text-xs font-bold text-night">STEP 06</span><span class="text-xs font-bold text-gold-ink">運用開始後の<wbr><span class="whitespace-nowrap">1か月目</span></span></div>
         <h3 class="mt-4 text-lg font-black">運用開始・初回報告</h3>
-        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">契約した業務を開始し、最初の1か月は週1回、状況を確認。翌月の合意した日までに初回の月次報告を行い、数字の見方をご説明します。</p>
+        <p class="mt-1 text-sm leading-[1.9] text-muted-foreground">ご契約いただいた業務を開始し、最初の1か月は週1回、状況を確認します。翌月の合意した日までに初回の月次報告を行い、数字の見方をご説明します。</p>
       </li>
     </ol>
     <p class="mt-4 text-center text-xs text-muted-foreground">時期はお問い合わせ後の目安です。ご依頼内容や資料の状況により前後します。</p>
@@ -202,13 +202,13 @@
           <p class="mt-2 text-sm text-muted-foreground">必要なものは、ご依頼内容に合わせてご案内します。</p>
           <p class="mt-5 flex items-start gap-3 rounded-lg bg-surface p-4 text-sm leading-[1.9]">
             <svg class="mt-1 size-4 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lock"/></svg>
-            会計ソフトは招待機能で接続します。ID・パスワードを共有いただく必要はありません。
+            会計ソフトは招待機能で接続します。ID・パスワードをお知らせいただく必要はありません。
           </p>
         </div>
         <ul class="grid gap-3 sm:grid-cols-2">
           <li class="flex gap-3 rounded-lg bg-surface p-4"><svg class="mt-0.5 size-5 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-monitor"/></svg><p class="text-sm"><span class="block font-bold">会計ソフト</span><span class="text-muted-foreground">お使いのアカウント。未導入の場合はご相談ください。</span></p></li>
           <li class="flex gap-3 rounded-lg bg-surface p-4"><svg class="mt-0.5 size-5 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-card"/></svg><p class="text-sm"><span class="block font-bold">銀行・カードの明細</span><span class="text-muted-foreground">会計ソフトとの明細連携を準備します。</span></p></li>
-          <li class="flex gap-3 rounded-lg bg-surface p-4"><svg class="mt-0.5 size-5 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg><p class="text-sm"><span class="block font-bold">請求書のひな形</span><span class="text-muted-foreground">請求書発行をご依頼いただく場合にご用意ください。</span></p></li>
+          <li class="flex gap-3 rounded-lg bg-surface p-4"><svg class="mt-0.5 size-5 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg><p class="text-sm"><span class="block font-bold">請求書のひな形</span><span class="text-muted-foreground">請求書の発行をご依頼いただく場合にご用意ください。</span></p></li>
           <li class="flex gap-3 rounded-lg bg-surface p-4"><svg class="mt-0.5 size-5 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clipboard"/></svg><p class="text-sm"><span class="block font-bold">従業員の勤怠データ</span><span class="text-muted-foreground">給与計算をご依頼いただく場合にご用意ください。</span></p></li>
         </ul>
       </div>
@@ -244,7 +244,7 @@
           <img src="/assets/site/img/logo-symbol-light.png" alt="" width="42" height="32" class="h-8 w-[42px]">
           <img src="/assets/site/img/logo-wordmark-light.png" alt="" width="140" height="13" class="h-[13px] w-[140px]">
         </a>
-        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業にもっと時間を。</p>
+        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業に、もっと時間を。</p>
       </div>
       <dl class="grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2 text-sm">
         <dt class="text-night-muted">名称</dt><dd>Terrario（テラリオ）</dd>
@@ -280,7 +280,7 @@
 <!-- スマホ下部の相談ボタン -->
 <div id="sticky-cta" class="sticky-cta fixed inset-x-0 bottom-0 z-40 grid grid-cols-[auto_1fr] gap-2 border-t bg-white/95 backdrop-blur md:hidden">
   <a href="tel:09091126102" class="inline-flex h-12 items-center justify-center gap-1.5 rounded-md border border-input bg-white px-4 text-sm font-bold"><svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>電話</a>
-  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-[0.6875rem]">60分</span>無料診断を相談する</a>
+  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-xs">60分</span>無料診断を相談する</a>
 </div>
 
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-24 left-1/2 z-[80] -translate-x-1/2 rounded-md bg-night px-4 py-3 text-sm text-night-foreground shadow-lg md:bottom-8" hidden></div>

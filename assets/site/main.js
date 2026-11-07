@@ -50,7 +50,7 @@
   if (select && mail) {
     const updateMail = () => {
       const subject = 'Terrario無料診断の相談';
-      const body = 'ご相談したいプラン：' + select.value + '\n\nご相談内容：\n';
+      const body = 'ご希望のプラン：' + select.value + '\n\nご相談内容：\n';
       mail.href = 'mailto:hisashi@terrario2026.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     };
     const saved = store.get();

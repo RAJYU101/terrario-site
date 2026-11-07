@@ -87,7 +87,7 @@
           <div class="rounded-xl border bg-white p-2 shadow-[0_24px_50px_-24px_rgb(23_22_15/0.45)]">
             <a href="/service/" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-book"/></svg></span>
-              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">対応業務と、プランごとの対応範囲</span></span>
+              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">業務の内容と、プランごとの対応範囲</span></span>
             </a>
             <a href="/service/#features" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cloud"/></svg></span>
@@ -108,7 +108,7 @@
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
       <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
-      <a href="/contact/" class="inline-flex h-10 items-center gap-1.5 rounded-full border-2 border-gold bg-white px-3 text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
+      <a href="/contact/" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
       </button>
@@ -157,68 +157,125 @@
   </div>
 </section>
 <!-- ======================= 料金プラン ======================= -->
+<!-- 各プランは「何を頼めるか（アイコン）→ 何件まで → 最初に払う金額」の順。人数は目安として小さく出す -->
 <section id="plans" class="py-20 sm:py-24" aria-labelledby="plans-title">
   <div class="wrap">
     <div class="text-center">
       <h2 id="plans-title" class=" text-[1.6rem] font-black leading-[1.55] sm:text-[2.2rem]">任せたい仕事に合わせて、<br class="sm:hidden">選べる3つのプラン。</h2>
-      <p class="mx-auto mt-4 max-w-[36rem] text-muted-foreground">まずは必要な業務から。無料診断で、御社に合う範囲をご提案します。表示料金はすべて税別です。</p>
+      <p class="mx-auto mt-4 max-w-[38rem] text-muted-foreground">必要な業務から始められます。無料診断で、御社に合う範囲をご提案します。表示料金はすべて税別です。</p>
     </div>
 
     <div class="mt-12 grid gap-6 lg:grid-cols-3 lg:items-stretch">
-      <article class="flex flex-col rounded-2xl border bg-white p-7">
-        <h3 class="text-xl font-black">ライト</h3>
-        <p class="mt-1 text-sm text-muted-foreground">まずは記帳と請求書から</p>
-        <p class="mt-3 inline-flex w-fit rounded-full bg-surface px-3 py-1 text-xs font-bold">従業員5人までの会社に</p>
-        <p class="mt-6 flex items-baseline gap-1"><span class="num text-[2.6rem] font-black leading-none">50,000</span><span class="text-sm font-bold text-muted-foreground">円 / 月</span></p>
-        <p class="num mt-2 text-sm text-muted-foreground">初期導入費 <span class="font-bold text-foreground">50,000円</span></p>
-        <ul class="mt-6 mb-8 divide-y border-y text-sm">
+      <!-- ライト -->
+      <article class="flex flex-col rounded-2xl border bg-white p-6 sm:p-7" aria-labelledby="plan-light">
+        <h3 id="plan-light" class="text-xl font-black">ライト</h3>
+        <p class="mt-1 font-bold leading-[1.7]">記帳と請求書を頼みたい方へ</p>
+        <p class="mt-5 flex items-baseline gap-1"><span class="text-sm font-bold">月額</span><span class="num text-[2.4rem] font-black leading-none">50,000</span><span class="text-sm font-bold text-muted-foreground">円・税別</span></p>
+        <p class="num mt-1.5 text-[0.9375rem] text-muted-foreground">初期導入費 <span class="font-bold text-foreground">50,000円</span>・税別</p>
+
+        <p class="mt-6 text-sm font-bold text-gold-ink">このプランで頼めること</p>
+        <ul class="plan-tiles mt-2.5 grid grid-cols-3 gap-2">
+          <li><svg aria-hidden="true"><use href="#i-book"/></svg>記帳</li>
+          <li><svg aria-hidden="true"><use href="#i-invoice"/></svg>請求書の発行</li>
+          <li><svg aria-hidden="true"><use href="#i-chart"/></svg>月次の試算表</li>
+        </ul>
+
+        <ul class="mt-5 divide-y border-y text-[0.9375rem]">
           <li class="flex justify-between gap-3 py-3"><span>記帳</span><span class="num font-bold">月150仕訳まで</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>請求書発行・入金確認</span><span class="num font-bold">月20件まで</span></li>
-          <li class="flex gap-2 py-3"><svg class="mt-1 size-4 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>月次の試算表を送付</li>
+          <li class="flex justify-between gap-3 py-3"><span>請求書の発行・入金確認</span><span class="num font-bold">月20件まで</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>月次報告</span><span class="font-bold">試算表の送付</span></li>
           <li class="flex justify-between gap-3 py-3"><span>チャット相談</span><span class="font-bold">営業日内に返信</span></li>
         </ul>
+
+        <dl class="plan-first num mt-5">
+          <div><dt>最初のお支払い<span>初期導入費＋1か月分</span></dt><dd>100,000円</dd></div>
+          <div><dt>6か月の合計<span>最低契約期間＋初期導入費</span></dt><dd>350,000円</dd></div>
+        </dl>
+        <p class="mt-4 mb-7 text-sm text-muted-foreground">従業員数の目安：5人まで（個人事業主の方も）</p>
         <a href="/contact/#mail" data-plan="ライト" class="mt-auto inline-flex h-12 items-center justify-center gap-2 rounded-md border border-input text-sm font-bold transition-colors hover:bg-muted">ライトについて相談</a>
       </article>
 
-      <article class="relative flex flex-col rounded-2xl border-2 border-gold bg-white p-7 shadow-[0_24px_60px_-36px_rgb(3_79_38/0.35)]">
-        <p class="absolute -top-px left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-night px-4 py-1.5 text-xs font-bold text-night-gold">経理をまとめて任せたい方へ</p>
-        <h3 class="text-xl font-black">スタンダード</h3>
-        <p class="mt-1 text-sm text-muted-foreground">毎月の経理をまるごと</p>
-        <p class="mt-3 inline-flex w-fit rounded-full bg-gold-soft px-3 py-1 text-xs font-bold text-gold-ink">従業員6〜20人の会社に</p>
-        <p class="mt-6 flex items-baseline gap-1"><span class="num text-[2.6rem] font-black leading-none text-gold-ink">80,000</span><span class="text-sm font-bold text-muted-foreground">円 / 月</span></p>
-        <p class="num mt-2 text-sm text-muted-foreground">初期導入費 <span class="font-bold text-foreground">100,000円</span></p>
-        <ul class="mt-6 mb-8 divide-y border-y text-sm">
+      <!-- スタンダード -->
+      <article class="relative flex flex-col rounded-2xl border-2 border-gold bg-white p-6 shadow-[0_24px_60px_-36px_rgb(3_79_38/0.35)] sm:p-7" aria-labelledby="plan-standard">
+        <p class="absolute -top-px left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-night px-4 py-1.5 text-xs font-bold text-night-gold">おすすめ</p>
+        <h3 id="plan-standard" class="text-xl font-black">スタンダード</h3>
+        <p class="mt-1 font-bold leading-[1.7]">記帳・請求書・支払管理・給与計算を<wbr>まとめて頼みたい方へ</p>
+        <p class="mt-5 flex items-baseline gap-1"><span class="text-sm font-bold">月額</span><span class="num text-[2.4rem] font-black leading-none text-gold-ink">80,000</span><span class="text-sm font-bold text-muted-foreground">円・税別</span></p>
+        <p class="num mt-1.5 text-[0.9375rem] text-muted-foreground">初期導入費 <span class="font-bold text-foreground">100,000円</span>・税別</p>
+
+        <p class="mt-6 text-sm font-bold text-gold-ink">このプランで頼めること</p>
+        <ul class="plan-tiles mt-2.5 grid grid-cols-3 gap-2">
+          <li><svg aria-hidden="true"><use href="#i-book"/></svg>記帳</li>
+          <li><svg aria-hidden="true"><use href="#i-invoice"/></svg>請求書の発行</li>
+          <li><svg aria-hidden="true"><use href="#i-wallet"/></svg>支払管理</li>
+          <li><svg aria-hidden="true"><use href="#i-users"/></svg>給与計算</li>
+          <li><svg aria-hidden="true"><use href="#i-chart"/></svg>月次報告書</li>
+          <li><svg aria-hidden="true"><use href="#i-cycle"/></svg>改善提案</li>
+        </ul>
+
+        <ul class="mt-5 divide-y border-y text-[0.9375rem]">
           <li class="flex justify-between gap-3 py-3"><span>記帳</span><span class="num font-bold">月300仕訳まで</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>請求書発行・入金確認</span><span class="num font-bold">月50件まで</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>請求書の発行・入金確認</span><span class="num font-bold">月50件まで</span></li>
           <li class="flex justify-between gap-3 py-3"><span>支払管理</span><span class="font-bold">含む</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>給与計算</span><span class="num font-bold">10人まで</span></li>
-          <li class="flex gap-2 py-3"><svg class="mt-1 size-4 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>月次報告書＋月1回の打ち合わせ</li>
-          <li class="flex justify-between gap-3 py-3"><span>業務改善提案</span><span class="num font-bold">年2回</span></li>
+          <li class="py-3"><span class="flex justify-between gap-3"><span>給与計算</span><span class="num font-bold">10人まで</span></span><span class="num mt-0.5 block text-sm text-muted-foreground">11人目から、1人につき月1,500円追加</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>月次報告</span><span class="text-right font-bold">報告書＋月1回の打ち合わせ</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>業務の改善提案</span><span class="num font-bold">年2回</span></li>
           <li class="flex justify-between gap-3 py-3"><span>チャット相談</span><span class="font-bold">営業日内に返信</span></li>
         </ul>
+
+        <dl class="plan-first num mt-5">
+          <div><dt>最初のお支払い<span>初期導入費＋1か月分</span></dt><dd>180,000円</dd></div>
+          <div><dt>6か月の合計<span>最低契約期間＋初期導入費</span></dt><dd>580,000円</dd></div>
+        </dl>
+        <p class="mt-4 mb-7 text-sm text-muted-foreground">従業員数の目安：6〜20人</p>
         <a href="/contact/#mail" data-plan="スタンダード" class="btn-gold mt-auto inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold">スタンダードについて相談</a>
       </article>
 
-      <article class="flex flex-col rounded-2xl border bg-white p-7">
-        <h3 class="text-xl font-black">プレミアム</h3>
-        <p class="mt-1 text-sm text-muted-foreground">会社の外に、経理部を</p>
-        <p class="mt-3 inline-flex w-fit rounded-full bg-surface px-3 py-1 text-xs font-bold">従業員21〜50人の会社に</p>
-        <p class="mt-6 flex items-baseline gap-1"><span class="num text-[2.6rem] font-black leading-none">150,000</span><span class="text-sm font-bold text-muted-foreground">円 / 月</span></p>
-        <p class="num mt-2 text-sm text-muted-foreground">初期導入費 <span class="font-bold text-foreground">150,000円</span></p>
-        <ul class="mt-6 mb-8 divide-y border-y text-sm">
+      <!-- プレミアム -->
+      <article class="flex flex-col rounded-2xl border bg-white p-6 sm:p-7" aria-labelledby="plan-premium">
+        <h3 id="plan-premium" class="text-xl font-black">プレミアム</h3>
+        <p class="mt-1 font-bold leading-[1.7]">経費精算・経営レポート・訪問まで<wbr>頼みたい方へ</p>
+        <p class="mt-5 flex items-baseline gap-1"><span class="text-sm font-bold">月額</span><span class="num text-[2.4rem] font-black leading-none">150,000</span><span class="text-sm font-bold text-muted-foreground">円・税別</span></p>
+        <p class="num mt-1.5 text-[0.9375rem] text-muted-foreground">初期導入費 <span class="font-bold text-foreground">150,000円</span>・税別</p>
+
+        <p class="mt-6 text-sm font-bold text-gold-ink">このプランで頼めること</p>
+        <ul class="plan-tiles mt-2.5 grid grid-cols-3 gap-2">
+          <li><svg aria-hidden="true"><use href="#i-book"/></svg>記帳</li>
+          <li><svg aria-hidden="true"><use href="#i-invoice"/></svg>請求書の発行</li>
+          <li><svg aria-hidden="true"><use href="#i-wallet"/></svg>支払管理</li>
+          <li><svg aria-hidden="true"><use href="#i-users"/></svg>給与計算</li>
+          <li><svg aria-hidden="true"><use href="#i-card"/></svg>経費精算</li>
+          <li><svg aria-hidden="true"><use href="#i-chart"/></svg>月次報告書</li>
+          <li><svg aria-hidden="true"><use href="#i-clipboard"/></svg>経営レポート</li>
+          <li><svg aria-hidden="true"><use href="#i-cycle"/></svg>改善提案</li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg>月1回の訪問</li>
+        </ul>
+
+        <ul class="mt-5 divide-y border-y text-[0.9375rem]">
           <li class="flex justify-between gap-3 py-3"><span>記帳</span><span class="num font-bold">月600仕訳まで</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>請求書発行・入金確認</span><span class="num font-bold">月100件まで</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>支払管理</span><span class="font-bold">含む</span></li>
-          <li class="flex justify-between gap-3 py-3"><span>給与計算</span><span class="num font-bold">50人まで</span></li>
-          <li class="flex gap-2 py-3"><svg class="mt-1 size-4 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>経費精算・経営レポート</li>
-          <li class="flex gap-2 py-3"><svg class="mt-1 size-4 shrink-0 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>月1回の訪問・毎月の改善提案</li>
+          <li class="flex justify-between gap-3 py-3"><span>請求書の発行・入金確認</span><span class="num font-bold">月100件まで</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>支払管理・経費精算</span><span class="font-bold">含む</span></li>
+          <li class="py-3"><span class="flex justify-between gap-3"><span>給与計算</span><span class="num font-bold">50人まで</span></span><span class="num mt-0.5 block text-sm text-muted-foreground">51人目から、1人につき月1,500円追加</span></li>
+          <li class="py-3"><span class="block">月次報告</span><span class="mt-0.5 block font-bold">報告書＋経営レポート＋月1回の訪問</span></li>
+          <li class="flex justify-between gap-3 py-3"><span>業務の改善提案</span><span class="font-bold">毎月</span></li>
           <li class="flex justify-between gap-3 py-3"><span>チャット相談</span><span class="font-bold">優先対応</span></li>
         </ul>
+
+        <dl class="plan-first num mt-5">
+          <div><dt>最初のお支払い<span>初期導入費＋1か月分</span></dt><dd>300,000円</dd></div>
+          <div><dt>6か月の合計<span>最低契約期間＋初期導入費</span></dt><dd>1,050,000円</dd></div>
+        </dl>
+        <p class="mt-4 mb-7 text-sm text-muted-foreground">従業員数の目安：21〜50人</p>
         <a href="/contact/#mail" data-plan="プレミアム" class="mt-auto inline-flex h-12 items-center justify-center gap-2 rounded-md border border-input text-sm font-bold transition-colors hover:bg-muted">プレミアムについて相談</a>
       </article>
     </div>
 
-    <p class="mt-6 text-center text-sm text-muted-foreground">従業員数はプラン選びの目安です。業務量・ご希望の内容に合わせてお見積りします。</p>
+    <p class="mt-6 text-center text-sm leading-[1.9] text-muted-foreground">金額はすべて税別で、追加料金は含みません。初期導入費と最初の1か月分の月額は、前払いでお支払いいただきます。<br class="hidden sm:inline">従業員数はプラン選びの目安です。業務量・ご希望の内容に合わせてお見積りします。</p>
+
+    <div class="mx-auto mt-6 max-w-[44rem] rounded-2xl border bg-white p-5 sm:px-6">
+      <p class="flex items-center gap-2.5 font-bold"><span class="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-gold-soft text-gold-ink"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-info"/></svg></span>「仕訳」とは？</p>
+      <p class="mt-2 leading-[1.85]">売上や経費など、お金の動きを帳簿に記録することです。件数が分からなくても、資料を確認してお見積りします。</p>
+    </div>
 
     <details class="group mt-10 overflow-hidden rounded-2xl border bg-white">
       <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-bold">
@@ -226,7 +283,7 @@
         <span class="inline-flex size-8 items-center justify-center rounded-full bg-surface text-gold-ink"><svg class="size-4 transition-transform duration-200 group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-plus"/></svg></span>
       </summary>
       <div class="relative overflow-x-auto border-t">
-        <table class="num w-full min-w-[640px] text-sm">
+        <table class="num w-full min-w-[640px] text-[0.9375rem]">
           <caption class="sr-only">プラン別サービス比較</caption>
           <thead class="bg-surface">
             <tr>
@@ -238,7 +295,7 @@
           </thead>
           <tbody class="divide-y">
             <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">記帳・帳簿づけ</th><td class="px-4 py-3">月150仕訳まで</td><td class="px-4 py-3">月300仕訳まで</td><td class="px-4 py-3">月600仕訳まで</td></tr>
-            <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">請求書発行・入金確認</th><td class="px-4 py-3">月20件まで</td><td class="px-4 py-3">月50件まで</td><td class="px-4 py-3">月100件まで</td></tr>
+            <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">請求書の発行・入金確認</th><td class="px-4 py-3">月20件まで</td><td class="px-4 py-3">月50件まで</td><td class="px-4 py-3">月100件まで</td></tr>
             <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">支払管理</th><td class="px-4 py-3 text-muted-foreground">対象外</td><td class="px-4 py-3">含む</td><td class="px-4 py-3">含む</td></tr>
             <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">給与計算</th><td class="px-4 py-3 text-muted-foreground">対象外</td><td class="px-4 py-3">10人まで</td><td class="px-4 py-3">50人まで</td></tr>
             <tr><th scope="row" class="px-6 py-3 text-left font-normal text-muted-foreground">経費精算</th><td class="px-4 py-3 text-muted-foreground">対象外</td><td class="px-4 py-3 text-muted-foreground">対象外</td><td class="px-4 py-3">含む</td></tr>
@@ -253,11 +310,20 @@
     <div id="fees" class="mt-6 grid gap-6 md:grid-cols-2">
       <div class="rounded-2xl border bg-white p-6">
         <h3 class="font-black">追加料金について</h3>
-        <p class="num mt-2 text-sm leading-[1.9] text-muted-foreground">上限を超えた場合は、仕訳1件100円、請求書1件500円、給与計算1人1,500円。超過が見込まれる場合は事前にご相談します。</p>
+        <p class="num mt-2 leading-[1.9] text-muted-foreground">上限を超えた場合の追加料金は、仕訳1件100円、請求書1件500円、給与計算1人1,500円です（いずれも月額・税別）。超過が見込まれる場合は事前にご相談します。</p>
+        <div class="mt-4 rounded-xl bg-surface p-4">
+          <p class="text-sm font-bold text-gold-ink">依頼例：スタンダードで給与計算を15人分</p>
+          <p class="num mt-1.5 leading-[1.8]">80,000円＋追加5人分 7,500円<br><span class="font-black">＝月額87,500円・税別</span></p>
+          <p class="mt-1.5 text-sm leading-[1.7] text-muted-foreground">※そのほかの業務がプランの範囲に収まる場合。初期導入費は別です。</p>
+        </div>
       </div>
       <div class="rounded-2xl border bg-white p-6">
-        <h3 class="font-black">初期導入費・契約期間について</h3>
-        <p class="mt-2 text-sm leading-[1.9] text-muted-foreground">初期導入費には、会計ソフトの設定、過去データの移行、手順づくり、操作説明を含みます。最低契約期間は6か月。以降は1か月前のご連絡で解約できます。</p>
+        <h3 class="font-black">初期導入費・お支払い・契約期間について</h3>
+        <p class="mt-2 leading-[1.9] text-muted-foreground">初期導入費には、会計ソフトの設定、過去データの移行、手順づくり、操作説明を含みます。初期導入費と最初の1か月分の月額は、業務開始前に前払いでお支払いいただきます。最低契約期間は6か月です。以降は1か月前のご連絡で解約できます。</p>
+        <div class="mt-4 rounded-xl bg-surface p-4">
+          <p class="text-sm font-bold text-gold-ink">会計ソフトの利用料</p>
+          <p class="mt-1.5 leading-[1.8]">Terrarioが作業のために使うソフトの利用料は、Terrarioが負担します。御社ですでにお使いのソフトの利用料は、引き続き御社でご負担ください。</p>
+        </div>
       </div>
     </div>
     <p class="mt-6 text-center text-sm text-muted-foreground">決算前の資料整理・紙帳票のデジタル化・AI活用の社内研修など、スポットのご依頼も別途お見積りします。</p>
@@ -292,7 +358,7 @@
           <img src="/assets/site/img/logo-symbol-light.png" alt="" width="42" height="32" class="h-8 w-[42px]">
           <img src="/assets/site/img/logo-wordmark-light.png" alt="" width="140" height="13" class="h-[13px] w-[140px]">
         </a>
-        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業にもっと時間を。</p>
+        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業に、もっと時間を。</p>
       </div>
       <dl class="grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2 text-sm">
         <dt class="text-night-muted">名称</dt><dd>Terrario（テラリオ）</dd>
@@ -328,7 +394,7 @@
 <!-- スマホ下部の相談ボタン -->
 <div id="sticky-cta" class="sticky-cta fixed inset-x-0 bottom-0 z-40 grid grid-cols-[auto_1fr] gap-2 border-t bg-white/95 backdrop-blur md:hidden">
   <a href="tel:09091126102" class="inline-flex h-12 items-center justify-center gap-1.5 rounded-md border border-input bg-white px-4 text-sm font-bold"><svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>電話</a>
-  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-[0.6875rem]">60分</span>無料診断を相談する</a>
+  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-xs">60分</span>無料診断を相談する</a>
 </div>
 
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-24 left-1/2 z-[80] -translate-x-1/2 rounded-md bg-night px-4 py-3 text-sm text-night-foreground shadow-lg md:bottom-8" hidden></div>

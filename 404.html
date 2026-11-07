@@ -75,7 +75,7 @@
           <div class="rounded-xl border bg-white p-2 shadow-[0_24px_50px_-24px_rgb(23_22_15/0.45)]">
             <a href="/service/" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-book"/></svg></span>
-              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">対応業務と、プランごとの対応範囲</span></span>
+              <span><span class="block text-sm font-bold">サービス内容</span><span class="block text-xs font-medium leading-[1.7] text-muted-foreground">業務の内容と、プランごとの対応範囲</span></span>
             </a>
             <a href="/service/#features" class="flex items-start gap-3 rounded-lg p-3 transition-colors hover:bg-surface">
               <span class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-gold-soft text-gold-ink"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cloud"/></svg></span>
@@ -96,7 +96,7 @@
     </nav>
     <div class="hdr-actions ml-auto flex items-center gap-2 whitespace-nowrap">
       <a href="/contact/#request" class="btn-gold hidden h-10 items-center gap-2 rounded-full px-4 text-[0.8125rem] font-bold sm:inline-flex md:h-11 md:px-6 md:text-sm"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-file"/></svg>資料請求</a>
-      <a href="/contact/" class="inline-flex h-10 items-center gap-1.5 rounded-full border-2 border-gold bg-white px-3 text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>お問い合わせ</a>
+      <a href="/contact/" aria-label="お問い合わせ" class="inline-flex size-10 items-center justify-center gap-1.5 rounded-full border-2 border-gold bg-white text-xs font-bold text-gold-ink transition-colors hover:bg-gold-soft min-[400px]:w-auto min-[400px]:px-3 sm:px-4 sm:text-sm md:h-11 md:gap-2 md:px-6"><svg class="size-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden min-[400px]:inline">お問い合わせ</span></a>
       <button type="button" id="menu-open" class="-mr-2 inline-flex size-10 cursor-pointer items-center justify-center rounded-md hover:bg-surface md:hidden" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-sheet">
         <span class="menu-icon-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span><span class="menu-icon-close hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></span>
       </button>
@@ -166,7 +166,7 @@
           <img src="/assets/site/img/logo-symbol-light.png" alt="" width="42" height="32" class="h-8 w-[42px]">
           <img src="/assets/site/img/logo-wordmark-light.png" alt="" width="140" height="13" class="h-[13px] w-[140px]">
         </a>
-        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業にもっと時間を。</p>
+        <p class="mt-4 text-sm text-night-muted">経理と事務を任せて、本業に、もっと時間を。</p>
       </div>
       <dl class="grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2 text-sm">
         <dt class="text-night-muted">名称</dt><dd>Terrario（テラリオ）</dd>
@@ -202,7 +202,7 @@
 <!-- スマホ下部の相談ボタン -->
 <div id="sticky-cta" class="sticky-cta fixed inset-x-0 bottom-0 z-40 grid grid-cols-[auto_1fr] gap-2 border-t bg-white/95 backdrop-blur md:hidden">
   <a href="tel:09091126102" class="inline-flex h-12 items-center justify-center gap-1.5 rounded-md border border-input bg-white px-4 text-sm font-bold"><svg class="size-4 text-gold-ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>電話</a>
-  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-[0.6875rem]">60分</span>無料診断を相談する</a>
+  <a href="/contact/" class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md text-sm font-bold"><span class="rounded-sm bg-night/10 px-1.5 py-0.5 text-xs">60分</span>無料診断を相談する</a>
 </div>
 
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-24 left-1/2 z-[80] -translate-x-1/2 rounded-md bg-night px-4 py-3 text-sm text-night-foreground shadow-lg md:bottom-8" hidden></div>
