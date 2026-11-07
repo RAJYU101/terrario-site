@@ -481,9 +481,6 @@
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
   }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
@@ -514,8 +511,11 @@
   .w-\[27\%\] {
     width: 27%;
   }
-  .w-\[38px\] {
-    width: 38px;
+  .w-\[40px\] {
+    width: 40px;
+  }
+  .w-\[42px\] {
+    width: 42px;
   }
   .w-\[78\%\] {
     width: 78%;
@@ -526,11 +526,11 @@
   .w-\[94\%\] {
     width: 94%;
   }
-  .w-\[107px\] {
-    width: 107px;
+  .w-\[129px\] {
+    width: 129px;
   }
-  .w-\[116px\] {
-    width: 116px;
+  .w-\[140px\] {
+    width: 140px;
   }
   .w-fit {
     width: fit-content;
@@ -1305,8 +1305,8 @@
     --tw-shadow: 0 24px 50px -24px var(--tw-shadow-color, rgb(23 22 15/0.45));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .shadow-\[0_24px_60px_-36px_rgb\(122_93_48\/0\.6\)\] {
-    --tw-shadow: 0 24px 60px -36px var(--tw-shadow-color, rgb(122 93 48/0.6));
+  .shadow-\[0_24px_60px_-36px_rgb\(3_79_38\/0\.35\)\] {
+    --tw-shadow: 0 24px 60px -36px var(--tw-shadow-color, rgb(3 79 38/0.35));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_30px_60px_-40px_rgb\(23_22_15\/0\.6\)\] {
@@ -1671,11 +1671,11 @@
     .lg\:h-\[13px\] {
       height: 13px;
     }
-    .lg\:w-10 {
-      width: calc(var(--spacing) * 10);
+    .lg\:w-\[42px\] {
+      width: 42px;
     }
-    .lg\:w-\[116px\] {
-      width: 116px;
+    .lg\:w-\[140px\] {
+      width: 140px;
     }
     .lg\:max-w-\[500px\] {
       max-width: 500px;
@@ -1765,29 +1765,35 @@
 }
 :root {
   --background: #ffffff;
-  --foreground: #17160f;
-  --surface: #f7f5f0;
+  --foreground: #142019;
+  --surface: #f3f7f4;
   --card: #ffffff;
   --card-foreground: #17160f;
-  --muted: #f1eee7;
-  --muted-foreground: #5b564a;
-  --border: #e5e0d4;
-  --input: #d6cebd;
-  --gold: #b08d57;
-  --gold-deep: #94733f;
-  --gold-ink: #7a5d30;
-  --gold-soft: #f5eddf;
-  --night: #141311;
-  --night-card: #1e1c18;
-  --night-foreground: #f1ebde;
-  --night-muted: #b0a794;
-  --night-border: #34302a;
-  --night-gold: #c9a871;
-  --primary: #b08d57;
-  --primary-foreground: #141311;
-  --ring: #94733f;
-  --seg-owner: #b08d57;
-  --seg-staff: #3b3730;
+  --muted: #e9f0eb;
+  --muted-foreground: #4c5a51;
+  --border: #dbe5de;
+  --input: #c3d3c8;
+  --gold: #034f26;
+  --gold-deep: #023b1c;
+  --gold-ink: #034f26;
+  --gold-soft: #e6f0e9;
+  --night: #06321a;
+  --night-card: #0c3f23;
+  --night-foreground: #eef4ef;
+  --night-muted: #a9bfb0;
+  --night-border: #215036;
+  --night-gold: #9fd3ae;
+  --primary: #034f26;
+  --primary-foreground: #ffffff;
+  --ring: #023b1c;
+  --seg-owner: #034f26;
+  --seg-staff: #9db8a5;
+  --night-btn: #ffffff;
+  --night-btn-fg: #034f26;
+  --glow: #f7faf8;
+  --bar-end: #5f9b74;
+  --btn-shadow: 3 79 38;
+  --marker: #cfe3d5;
   --radius: 0.625rem;
   color-scheme: light;
 }
@@ -1868,16 +1874,13 @@
     background: var(--gold);
   }
   .marker {
-    background: linear-gradient(transparent 68%, var(--gold) 68%);
-    @supports (color: color-mix(in lab, red, red)) {
-      background: linear-gradient(transparent 68%, color-mix(in oklab, var(--gold) 38%, transparent) 68%);
-    }
+    background: linear-gradient(transparent 68%, var(--marker) 68%);
     padding-inline: .05em;
   }
   .btn-gold {
     background: var(--primary);
     color: var(--primary-foreground);
-    box-shadow: inset 0 0 0 1px var(--gold-deep), 0 6px 16px -10px rgb(122 93 48 / .7);
+    box-shadow: inset 0 0 0 1px var(--gold-deep), 0 6px 16px -10px rgb(var(--btn-shadow) / .45);
   }
   .btn-gold:hover {
     background: var(--primary);
@@ -1889,9 +1892,9 @@
     border-radius: 6px;
   }
   .photo-stage {
-    background: radial-gradient(circle at 50% 46%, transparent 0 41%, var(--gold) 41% calc(41% + 1px), transparent calc(41% + 1.5px)), radial-gradient(circle at 50% 50%, #fbf6ec 0, var(--gold-soft) 70%);
+    background: radial-gradient(circle at 50% 46%, transparent 0 41%, var(--gold) 41% calc(41% + 1px), transparent calc(41% + 1.5px)), radial-gradient(circle at 50% 50%, var(--glow) 0, var(--gold-soft) 70%);
     @supports (color: color-mix(in lab, red, red)) {
-      background: radial-gradient(circle at 50% 46%, transparent 0 41%, color-mix(in oklab, var(--gold) 40%, transparent) 41% calc(41% + 1px), transparent calc(41% + 1.5px)), radial-gradient(circle at 50% 50%, #fbf6ec 0, var(--gold-soft) 70%);
+      background: radial-gradient(circle at 50% 46%, transparent 0 41%, color-mix(in oklab, var(--gold) 40%, transparent) 41% calc(41% + 1px), transparent calc(41% + 1.5px)), radial-gradient(circle at 50% 50%, var(--glow) 0, var(--gold-soft) 70%);
     }
   }
   .dot-grid {
@@ -2121,7 +2124,7 @@ html {
   height: 100%;
   transform-origin: left center;
   transform: scaleX(0);
-  background: linear-gradient(90deg, var(--gold-deep), var(--gold) 70%, #d9bd8c);
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold) 70%, var(--bar-end));
 }
 @media (prefers-reduced-motion: reduce) {
   .site-header, .site-header.is-hidden, .hdr-row, .logo-plate, .nav-item::after {
@@ -2311,6 +2314,17 @@ mark.todo {
   text-align: right;
   color: var(--muted-foreground);
   font-size: .875rem;
+}
+.bg-night .btn-gold, .page-cta .btn-gold {
+  background: var(--night-btn);
+  color: var(--night-btn-fg);
+  box-shadow: none;
+}
+.bg-night .btn-gold:hover, .page-cta .btn-gold:hover {
+  background: var(--night-btn);
+  @supports (color: color-mix(in lab, red, red)) {
+    background: color-mix(in oklab, var(--night-btn) 88%, black);
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
