@@ -1904,6 +1904,11 @@
   p, li, dd, dt, td, th {
     text-wrap: pretty;
   }
+  @supports (font: -apple-system-body) {
+    h1, h2, h3, h4, p, li, dd, dt, td, th {
+      text-wrap: wrap;
+    }
+  }
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 3px;
