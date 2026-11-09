@@ -1168,8 +1168,8 @@
   .text-\[2\.75rem\] {
     font-size: 2.75rem;
   }
-  .text-\[clamp\(1\.7rem\,8\.5vw\,2\.05rem\)\] {
-    font-size: clamp(1.7rem, 8.5vw, 2.05rem);
+  .text-\[clamp\(1\.65rem\,8vw\,2\.05rem\)\] {
+    font-size: clamp(1.65rem, 8vw, 2.05rem);
   }
   .leading-\[1\.4\] {
     --tw-leading: 1.4;
