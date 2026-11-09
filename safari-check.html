@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Safari表示テスト（一時）</title>
+<link rel="stylesheet" href="/assets/site/style.css">
+<style>
+  .lbl{font-size:12px;font-weight:700;color:#c00;margin-bottom:4px}
+  .row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:12px}
+  .t{display:flex;flex-direction:column;align-items:center;gap:12px;border:1px solid #ccc;border-radius:16px;background:#fff;padding:20px 12px;text-align:center;font-size:15px;font-weight:700}
+  .ic{display:inline-flex;width:40px;height:40px;border-radius:999px;background:#e6f0e9}
+</style>
+</head>
+<body class="bg-surface">
+<div class="wrap py-6">
+  <p class="text-sm font-bold">Safari表示テスト（一時ページ・確認後に削除します）</p>
+  <div class="row">
+    <div><p class="lbl">A 今のまま</p><div class="t"><span class="ic"></span>支払管理・<br>経費精算</div></div>
+    <div><p class="lbl">B pretty切</p><div class="t" style="text-wrap:wrap"><span class="ic"></span>支払管理・<br>経費精算</div></div>
+    <div><p class="lbl">C phrase切</p><div class="t" style="word-break:normal"><span class="ic"></span>支払管理・<br>経費精算</div></div>
+    <div><p class="lbl">D 両方切</p><div class="t" style="word-break:normal;text-wrap:wrap"><span class="ic"></span>支払管理・<br>経費精算</div></div>
+    <div><p class="lbl">E spanで包む</p><div class="t"><span class="ic"></span><span style="display:block;width:100%">支払管理・<br>経費精算</span></div></div>
+  </div>
+  <div class="row">
+    <div><p class="lbl">A2 liで今のまま</p><ul><li class="t"><span class="ic"></span>請求書の発行・<br>入金確認</li></ul></div>
+    <div><p class="lbl">B2 li pretty切</p><ul><li class="t" style="text-wrap:wrap"><span class="ic"></span>請求書の発行・<br>入金確認</li></ul></div>
+    <div><p class="lbl">C2 li phrase切</p><ul><li class="t" style="word-break:normal"><span class="ic"></span>請求書の発行・<br>入金確認</li></ul></div>
+    <div><p class="lbl">D2 li 両方切</p><ul><li class="t" style="word-break:normal;text-wrap:wrap"><span class="ic"></span>請求書の発行・<br>入金確認</li></ul></div>
+    <div><p class="lbl">E2 li brなし</p><ul><li class="t"><span class="ic"></span>請求書の発行・入金確認</li></ul></div>
+  </div>
+  <p class="lbl" style="margin-top:20px">F ボタン・札（今のまま）</p>
+  <ul class="flex flex-wrap gap-2 text-sm font-bold">
+    <li class="inline-flex items-center gap-1.5 rounded-full border bg-white px-3.5 py-2">記帳から給与計算まで</li>
+    <li class="inline-flex items-center gap-1.5 rounded-full border bg-white px-3.5 py-2">クラウドとAI、人の確認で支える</li>
+    <li class="inline-flex items-center gap-1.5 rounded-full border border-gold bg-gold-soft px-3.5 py-2 text-gold-ink">月額5万円から（税別）</li>
+  </ul>
+  <div class="mt-3 flex gap-3">
+    <a class="btn-gold inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-sm font-bold">無料診断を相談する</a>
+    <span class="rounded-full bg-night px-3 py-1 text-xs font-bold text-night-gold">経理・事務代行サービス</span>
+  </div>
+  <p class="lbl" style="margin-top:20px">G 料金の札（今のまま）</p>
+  <ul class="plan-tiles grid grid-cols-6 gap-2" style="max-width:640px">
+    <li><svg aria-hidden="true"><use href="#x"/></svg>記帳<span class="num font-normal text-muted-foreground">月300仕訳</span></li>
+    <li><svg aria-hidden="true"><use href="#x"/></svg>請求書の発行</li>
+    <li><svg aria-hidden="true"><use href="#x"/></svg>支払管理</li>
+    <li><svg aria-hidden="true"><use href="#x"/></svg>月次報告書</li>
+    <li><svg aria-hidden="true"><use href="#x"/></svg>経営<br>レポート</li>
+    <li><svg aria-hidden="true"><use href="#x"/></svg>月1回の訪問</li>
+  </ul>
+</div>
+</body>
+</html>
